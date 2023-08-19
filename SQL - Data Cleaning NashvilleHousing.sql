@@ -112,7 +112,7 @@ SELECT
 	CASE 
 		WHEN SoldAsVacant = 'Y' THEN 'Yes'
 		WHEN SoldAsVacant = 'N' THEN 'No'
-	ELSE SoldAsVacant
+	        ELSE SoldAsVacant
 	END 
 FROM Nashville2
 
@@ -122,7 +122,7 @@ SET SoldAsVacant =
 	CASE 
 		WHEN SoldAsVacant = 'Y' THEN 'Yes'
 		WHEN SoldAsVacant = 'N' THEN 'No'
-	ELSE SoldAsVacant
+	        ELSE SoldAsVacant
 	END 
 
 
