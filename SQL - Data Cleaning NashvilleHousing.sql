@@ -133,9 +133,9 @@ SET SoldAsVacant =
 
 WITH RowNumCTE AS
 ( 
-SELECT *,
+        SELECT *,
 	ROW_NUMBER() OVER (PARTITION BY ParcelID, PropertyAddress, SalePrice, SaleDate, LegalReference ORDER BY UniqueID) AS row_num
-FROM Nashville2
+        FROM Nashville2
 )
 DELETE 
 FROM RowNumCTE
@@ -144,9 +144,9 @@ WHERE row_num > 1
 -- check if duplicates are deleted 
 WITH RowNumCTE AS
 ( 
-SELECT *,
+        SELECT *,
 	ROW_NUMBER() OVER (PARTITION BY ParcelID, PropertyAddress, SalePrice, SaleDate, LegalReference ORDER BY UniqueID) AS row_num
-FROM Nashville2
+        FROM Nashville2
 )
 SELECT * 
 FROM RowNumCTE
