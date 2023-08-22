@@ -9,7 +9,7 @@ ALTER TABLE Nashville2
 ADD SaleDateConverted date
 
 UPDATE Nashville2
-SET SaleDateConverted = CONVERT(Date, SaleDate)
+SET SaleDateConverted = CONVERT(date, SaleDate)
 
 
 
@@ -24,7 +24,7 @@ ON t1.ParcelID = t2.ParcelID
 AND t1.[UniqueID ] <> t2.[UniqueID ]
 WHERE t1.PropertyAddress IS NULL
 
-Update t1
+UPDATE t1
 SET PropertyAddress = ISNULL(t1.PropertyAddress, t2.PropertyAddress)
 FROM Nashville2 AS t1
 JOIN Nashville2 AS t2
@@ -105,7 +105,7 @@ FROM Nashville2
 SELECT DISTINCT(SoldAsVacant), COUNT(SoldAsVacant)
 FROM Nashville2
 GROUP BY SoldAsVacant
-Order BY 2
+ORDER BY 2
 
 
 SELECT 
