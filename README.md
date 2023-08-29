@@ -1,6 +1,6 @@
 # NashvilleHousing-SQL-DataCleaning
 
-This project focuses on Data Cleaning in SQL Server.
+This project focuses on Data Cleaning in MS SQL Server.
 
 For this project, data from https://www.kaggle.com/datasets/tmthyjames/nashville-housing-data has been alternated for data cleaning purposes and used to perform SQL queries.
 
